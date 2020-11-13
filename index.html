@@ -159,6 +159,97 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-在项目上使用git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="拉取最新项目和推送"><a href="#拉取最新项目和推送" class="headerlink" title="拉取最新项目和推送"></a>拉取最新项目和推送</h3><p>拉取最新项目和推送</p>
+<p>###git拉取最新项目和推送</p>
+<p><img src="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/git%E5%9C%B0%E5%9D%80.png"></p>
+<ol>
+<li>在你需要加入一个项目开发时，需要在仓库把项目下载下来，进入gitlab， 在项目中找到你需要下载的项目地址，复制地址。这个地址分为<strong>http</strong>和<strong>ssh</strong>。</li>
+<li>在本地创建了一个文件夹，进入文件里面，使用cmd（黑窗口）或者gitbash进行克隆项目。使用命令git clone 复制的http或ssh地址。</li>
+<li>下载的下来的项目，进入到项目的下一目录，进入编剧器进行代码编剧时，我们首先需要拉取项目上最新的代码，<code>git pull origin 分支名</code>（分支名是你是从那个分支拉去下来的项目）。</li>
+<li>在确定你的项目代码已经是最新的项目代码，在创建分支时，我们分为两种情况，一种是你跟你的同事不在一个分支上面进行项目编辑修改等，另一种情况在一个分支上面。你就进行创建你自己的分支：<code>git branch 分支名</code>，然后切换至你创建的分支：<code>git checkout 分支名</code>，当然你也可以一步直接创建并切换分支：<code>git checkout -b 分支名 </code>或者 <code>git switch -c 分支名</code>,。(如果您跟你的同事不在一个分支上面，分支名你可以按照自己的喜欢来命名（一般使用英文），但是你们在一个分支上面进行分组的话，命名就要根据大家的统一要求来)</li>
+<li>查看创建的分支：<code>git branch</code></li>
+<li>当你对代码进行修改之后，需要添加到暂存区：<code>git add .</code>  或者  <code>git add -A</code>，两者均可o</li>
+<li>提交暂存区的文件：<code>git commit -m &quot;xx&quot;</code>,双引号里面的xx代表的是对修改的内容做一个相关的解释，在每次修改代码时，如果不用git add提交到暂存区，是无法用commit进行提交。</li>
+<li>从本地推送到分支上面，<code>git  push origin 分支名</code></li>
+<li>切换至主分支，<code>git checkout master</code>  和 <code>git switch master</code> (一般默认主分支都为master)</li>
+<li>删除本地分支：<code>git branch -d</code></li>
+<li>删除分支名：<code>git branch -D</code> 分支名,因为这个时候的分支还没有合并到当前分支，所以-D才能删除。</li>
+</ol>
+<h3 id="常用的git-命令"><a href="#常用的git-命令" class="headerlink" title="常用的git 命令"></a>常用的git 命令</h3><ul>
+<li><p><code>git status</code>命令可以随时掌握工作区的状态</p>
+</li>
+<li><p><code>git diff</code>命令可以查看被修改的部分。</p>
+<p>在修改的时候我们可能会因为某些原因，觉得上一个版本才是合适的，所以这个时候需要怎么退回到上一个版本。HEAD指向的版本就是当前的版本，HEAD^指上一个版本，HEAD^^指上上一个版本，但是如果版本太多如第100个版本，则就用HEAD~100。</p>
+</li>
+<li><p>git可以使我们在任何一个版本，使用命令<code>git reset --hard commit-d</code>(commit-d提交的版本号id),使用<code>git log</code>就可以查看提交历史（，按住键盘q就能退出查看状态。），以便确定要退回到那个版本。</p>
+<p><img src="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/%E7%89%88%E6%9C%AC%E5%8F%B7.png"></p>
+<p>使用git reflog可以查看命令历史，以便确定要到回来的那个版本。<img src="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/gitreflog.png"></p>
+</li>
+</ul>
+<h3 id="git撤销修改"><a href="#git撤销修改" class="headerlink" title="git撤销修改"></a>git撤销修改</h3><ol>
+<li>当乱修改了工作区的某个文件内容，想直接丢弃工作内容的修改时，用命令 <code>git checkout --file(文件名)</code></li>
+<li>当你修改了工作区的某个文件，且还把他添加到暂存区时，想要丢弃修改，分成两步：第一步用命令 <code>git reset HEAD  (file)文件名</code>，然后重复1</li>
+</ol>
+<h3 id="删除文件不同状况"><a href="#删除文件不同状况" class="headerlink" title="删除文件不同状况"></a>删除文件不同状况</h3><p>先手动删除文件，可以使用<code>git rm (file)</code> 和 git add (file)效果是一样的</p>
+<p>如果不小心删错了文件，可以利用命令<code>git checkout --(文件名)</code>恢复到最新版本。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git学习使用shi</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-路径的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -190,7 +281,7 @@
 <li>图像文件位于HTML文件的上一级文件夹：在文件名之前加入“../” ，如果是上两级，则需要使用 “../ ../”，以此类推，如img src=”../logo.gif” 。</li>
 </ul>
 <p>2、绝对路径</p>
-<p>绝对路径以Web站点根目录为参考基础的目录路径。之所以称为绝对，意指当所有网页引用同一个文件时，所使用的路径都是一样的</p>
+<p>绝对路径以Web站点根目录为参考基础的目录路径。之所以称为绝对，意指当所有网页引用同一个文件时，所使用的路径都是一样的。</p>
 <p>“D:\web\img\logo.gif”，或完整的网络地址，例如“<a target="_blank" rel="noopener" href="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4152598231,1037344495&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=5807D810BD00EACE342B64C6030070BD%E2%80%9D%E3%80%82">https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4152598231,1037344495&amp;fm=173&amp;app=25&amp;f=JPEG?w=218&amp;h=146&amp;s=5807D810BD00EACE342B64C6030070BD”。</a></p>
 
       
@@ -421,11 +512,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">路径</a>
+                <a href="javascript:void(0)" class="js-tag color1">git学习使用shi</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">浏览器解析渲染页面原理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">路径</a>
               </li>
             
             <div class="clearfix"></div>
