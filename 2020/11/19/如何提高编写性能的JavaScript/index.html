@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Fuqiong博客</title>
+  <title>如何提高编写性能的JavaScript | Fuqiong博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="请勿把工作与兴趣混合">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fuqiong博客">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="如何编写高性能的JavaScript 遵循严格模式：“use strict”； 将js脚本放在页面底部，加快渲染页面； 将Js脚本成组打包，减少请求； 尽量使用局部变量来保存全局变量； 尽量减少使用闭包； 使用window对象属性方法时，省略window； 尽量减少对象的成员嵌套； 缓存DOM节点的访问； 通过避免使用eval（）和Function（）构造器； 给setTimeout()和setI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何提高编写性能的JavaScript">
+<meta property="og:url" content="http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/index.html">
 <meta property="og:site_name" content="Fuqiong博客">
-<meta property="og:description" content="请勿把工作与兴趣混合">
+<meta property="og:description" content="如何编写高性能的JavaScript 遵循严格模式：“use strict”； 将js脚本放在页面底部，加快渲染页面； 将Js脚本成组打包，减少请求； 尽量使用局部变量来保存全局变量； 尽量减少使用闭包； 使用window对象属性方法时，省略window； 尽量减少对象的成员嵌套； 缓存DOM节点的访问； 通过避免使用eval（）和Function（）构造器； 给setTimeout()和setI">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-19T08:51:42.000Z">
+<meta property="article:modified_time" content="2020-11-20T03:34:53.825Z">
 <meta property="article:author" content="FuqiongWang">
 <meta property="article:tag" content="HTML, CSS, Javascript, vue.js, angular.js, git">
 <meta name="twitter:card" content="summary">
@@ -157,232 +159,176 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-如何提高编写性能的JavaScript" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      如何提高编写性能的JavaScript
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/" class="archive-article-date">
+
+        
+        <a href="/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/" class="archive-article-date">
   	<time datetime="2020-11-19T08:51:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/">如何提高编写性能的JavaScript</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-11-13T02:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">react学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/" class="archive-article-date">
-  	<time datetime="2020-11-12T05:50:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-12</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git学习使用shi</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/10/%E8%B7%AF%E5%BE%84%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-11-10T06:40:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/10/%E8%B7%AF%E5%BE%84%E7%9A%84%E4%BD%BF%E7%94%A8/">路径的使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">路径</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <h3 id="如何编写高性能的JavaScript"><a href="#如何编写高性能的JavaScript" class="headerlink" title="如何编写高性能的JavaScript"></a>如何编写高性能的JavaScript</h3><ul>
+<li>遵循严格模式：“use strict”；</li>
+<li>将js脚本放在页面底部，加快渲染页面；</li>
+<li>将Js脚本成组打包，减少请求；</li>
+<li>尽量使用局部变量来保存全局变量；</li>
+<li>尽量减少使用闭包；</li>
+<li>使用window对象属性方法时，省略window；</li>
+<li>尽量减少对象的成员嵌套；</li>
+<li>缓存DOM节点的访问；</li>
+<li>通过避免使用eval（）和Function（）构造器；</li>
+<li>给setTimeout()和setInterval()传递函数而不是字符串作为参数；</li>
+<li>尽量使用直接量创建对象和数组；</li>
+<li>最小化重绘（repaint）和回流（reflow）</li>
+</ul>
+<h3 id="cookies-sessionStorage和localStorage的区别"><a href="#cookies-sessionStorage和localStorage的区别" class="headerlink" title="cookies,sessionStorage和localStorage的区别"></a>cookies,sessionStorage和localStorage的区别</h3><p><strong>相同点：</strong>都存储在客户端</p>
+<p><strong>不同点</strong></p>
+<p>存储大小：cookie数据大小不能超过4k。seeeionStorage和localStorage虽然也有存储大小的限制，但比cookie大得多，可以达到5M或者更大。</p>
+<p>有效时间：localStorage存储持久数据，浏览器关闭后数据不丢失，除非主动删除数据；sessionStorage数据在浏览器关闭窗口之后就会自动删除；cookie设置的cookie过期时间之前一直有效，即使窗口或者浏览器关闭。</p>
+<p>数据于服务器之间的交互方式：cookie的数据会自动传递到服务器，服务器端也可以写cookie到客服端；localStorage和sessionStorage不会自动把数据发给服务器，仅在本地保存。</p>
+<p>作用域：localStorage的作用域限制在文档源，localStorage同源的文档之间可以相互访问和修改相同名称的数据；localStorage受到浏览器厂商的限制，chrome下存储的数据，360浏览器下不可访问；会得到‘Invalid Date’.</p>
+<p>sessionStorage在localStorage的同源策略基础之上，还有更严格的限制；他还被限制在窗口中，意思是同一个窗口或者标签页的不同页面之间可以共享seessionStorage;但是不同的窗口或者标签页之间不能共享sessionStorage，即便他们是在同一个地址；这里的窗口时顶级窗口，如果里面有多个iframe,他们之间共享sessionStorage。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/" class="archive-article-date">
-  	<time datetime="2019-11-10T03:25:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/">浏览器引擎</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">浏览器解析渲染页面原理</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/17/%E8%A1%8C%E7%B1%BB%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="archive-article-date">
-  	<time datetime="2019-07-17T08:51:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">react学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/17/%E8%A1%8C%E7%B1%BB%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">行类元素、块级元素</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -405,8 +351,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

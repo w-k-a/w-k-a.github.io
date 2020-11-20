@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>浏览器引擎 | Fuqiong博客</title>
+  <title>react学习笔记 | Fuqiong博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浏览器解析渲染页面原理 浏览器 最重要 最核心的部分是“解释引擎”，也就是“浏览器内核”： 负责对网页语法的解释（如HTML、JavaScript）并渲染（显示）网页。网页的工作过程需要使用到两个引擎：渲染引擎和javascript引擎什么是JavaScript引擎？简单来讲，就是能够提供执行JavaScript代码的运行环境所以，通常所谓的浏览器内核也就是浏览器所采用的渲染引擎，排版引擎(Ren">
+  <meta name="description" content="React构建用户界面的JavaScript库,主要用于构建UI界面。Instagram，2013年开源。 特点：  声明式的设计 高校，采用虚拟DOM来实现dom的渲染，最大限度的减少dom的操作 灵活，跟其他库灵活搭配使用 jsx,俗称js里面写HTML,JAVASCRIPT 语法的扩展。 组件化，模块化。代码容易复用。 单项的数据流。没有实现数据的双向绑定。数据-》视图-》事件-》数据。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器引擎">
-<meta property="og:url" content="http://example.com/2020/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/index.html">
+<meta property="og:title" content="react学习笔记">
+<meta property="og:url" content="http://example.com/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Fuqiong博客">
-<meta property="og:description" content="浏览器解析渲染页面原理 浏览器 最重要 最核心的部分是“解释引擎”，也就是“浏览器内核”： 负责对网页语法的解释（如HTML、JavaScript）并渲染（显示）网页。网页的工作过程需要使用到两个引擎：渲染引擎和javascript引擎什么是JavaScript引擎？简单来讲，就是能够提供执行JavaScript代码的运行环境所以，通常所谓的浏览器内核也就是浏览器所采用的渲染引擎，排版引擎(Ren">
+<meta property="og:description" content="React构建用户界面的JavaScript库,主要用于构建UI界面。Instagram，2013年开源。 特点：  声明式的设计 高校，采用虚拟DOM来实现dom的渲染，最大限度的减少dom的操作 灵活，跟其他库灵活搭配使用 jsx,俗称js里面写HTML,JAVASCRIPT 语法的扩展。 组件化，模块化。代码容易复用。 单项的数据流。没有实现数据的双向绑定。数据-》视图-》事件-》数据。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-10T03:25:33.000Z">
-<meta property="article:modified_time" content="2020-11-12T03:26:06.048Z">
+<meta property="article:published_time" content="2020-11-13T02:52:30.000Z">
+<meta property="article:modified_time" content="2020-11-14T04:16:56.544Z">
 <meta property="article:author" content="FuqiongWang">
-<meta property="article:tag" content="浏览器解析渲染页面原理">
+<meta property="article:tag" content="react">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Fuqiong博客" type="application/atom+xml">
@@ -159,36 +159,76 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-浏览器引擎" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-react学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      浏览器引擎
+      react学习笔记
     </h1>
   
 
         
-        <a href="/2020/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/" class="archive-article-date">
-  	<time datetime="2020-11-10T03:25:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-10</time>
+        <a href="/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-11-13T02:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>浏览器解析渲染页面原理</p>
-<p>浏览器 最重要 最核心的部分是“解释引擎”，也就是“浏览器内核”： 负责对网页语法的解释（如HTML、JavaScript）并渲染（显示）网页。<br>网页的工作过程需要使用到两个引擎：渲染引擎和javascript引擎<br>什么是JavaScript引擎？简单来讲，就是能够提供执行JavaScript代码的运行环境<br>所以，通常所谓的浏览器内核也就是浏览器所采用的渲染引擎，排版引擎(Rendering Engine，也有称渲染引擎)，渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。不同的浏览器内核对网页编写语法的解释也有不同，因此同一网页在不同的内核的浏览器里的渲染（显示）效果也可能不同，这也是网页编写者需要在不同内核的浏览器中测试网页显示效果的原因。<br>浏览器内核很多，如果加上所有的几乎没有什么人在用的非商业的免费内核，那么可能大约有10款以上甚至更多，不过通常我们比较常见的大约只有以下四种：</p>
+        <p>React构建用户界面的JavaScript库,主要用于构建UI界面。Instagram，2013年开源。</p>
+<p><strong>特点</strong>：</p>
+<ol>
+<li>声明式的设计</li>
+<li>高校，采用虚拟DOM来实现dom的渲染，最大限度的减少dom的操作</li>
+<li>灵活，跟其他库灵活搭配使用</li>
+<li>jsx,俗称js里面写HTML,JAVASCRIPT 语法的扩展。</li>
+<li>组件化，模块化。代码容易复用。</li>
+<li>单项的数据流。没有实现数据的双向绑定。数据-》视图-》事件-》数据。</li>
+</ol>
+<p><strong>创建项目</strong></p>
+<p>1 、通过script引用使用，仅用于学习调式使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script crossorigin src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;react@16&#x2F;umd&#x2F;react.development.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script crossorigin src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;react-dom@16&#x2F;umd&#x2F;react-dom.development.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、通过react的脚手架，创建项目进行开发、部署。</p>
 <ul>
-<li>Trident ：[ˈtraɪdnt]<br>IE浏览器(遨游、世界之窗、腾讯TT…都是IE)Trident内核最慢<br>IE 以Trident 作为内核引擎 ,前缀为–ms。</li>
-<li>Gecko：[ˈgekəʊ]</li>
-<li>开放源代码、以C++编写的网页排版引擎，是跨平台的<br>FireFox是基于 Gecko 开发;</li>
-<li>presto：[ˈprestəʊ]<br>目前公认网页浏览速度最快的浏览器内核，然而代价是牺牲了网页的兼容性。由Opera Software开发的浏览器排版引擎，Opera（欧朋浏览器），但由于市场选择问题，主要应用在手机平台–Opera mini</li>
-<li>Webkit：<br>苹果公司自己的内核，google的chrome也使用webkit作为内核。<br>是一个开源的浏览器引擎，同时WebKit 也是苹果Mac OS X 系统引擎框架版本的名称，它拥有清晰的源码结构、极快的渲染速度，包含的 WebCore 排版引擎和 JavaScriptCore解析引擎，均是从KDE的KHTML及KJS引擎衍生而来。<br>许多网站都是按照IE来架设的，很多网站不兼容Webkit内核，比如登录界面、网银等网页均不可使用Webkit内核的浏览器。<br>Safari([səˈfɑri]), Google Chrome, 傲游3, 猎豹浏览器, 百度浏览器 opera浏览器 基于 Webkit 开发。</li>
+<li><p>安装脚手架 Create React App。cnpm install -g  create-react-app。（使用cnpm安装需要先安装淘宝镜像 npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p> ）</p>
+</li>
+<li><p>创建项目 Create-React-App 01reactapp（项目名称可以自定义）。</p>
+</li>
 </ul>
-<p>注：2013年2月Opera宣布转向WebKit引擎<br>注：2013年4月Opera宣布放弃WEBKIT，跟随GOOGLE的新开发的blink引擎</p>
+<p><strong>React元素渲染</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let h1 &#x3D; &lt;h1&gt;helloword&lt;&#x2F;h1&gt;</span><br><span class="line">使用JSX的写法，可以创建js元素对象</span><br><span class="line">注意：JSX元素对象，或者组件对象，必须只有一个根元素（根节点）</span><br></pre></td></tr></table></figure>
+
+<p>案例使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 实现页面时刻显示</span><br><span class="line">function clock() &#123;</span><br><span class="line">  let time &#x3D; new Date().toLocaleTimeString()</span><br><span class="line">  let element &#x3D; (&lt;div&gt;</span><br><span class="line">                   &lt;h1&gt;现在的时间&#123;time&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">                   &lt;h2&gt;这是副标题&lt;&#x2F;h2&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;)</span><br><span class="line">  let root &#x3D; document.getElementById(&#39;root&#39;)</span><br><span class="line">  ReactDOM.render(element, root);</span><br><span class="line">&#125;</span><br><span class="line">clock()</span><br><span class="line">setInterval(clock, 1000)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数式组件渲染</span><br><span class="line">function Clock(props)&#123;</span><br><span class="line">  return(&lt;div&gt;</span><br><span class="line">    &lt;h1&gt;现在的时间&#123;props.data.toLocaleTimeString()&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;h2&gt;这是副标题&lt;&#x2F;h2&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function run()&#123;</span><br><span class="line">  ReactDOM.render(&lt;Clock data&#x3D;&#123;new Date()&#125;&#x2F;&gt;, document.querySelector(&quot;#root&quot;));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setInterval(run,1000)</span><br></pre></td></tr></table></figure>
+
+<p><strong>React Jsx</strong></p>
+<p>优点：</p>
+<ol>
+<li>jsx执行更快，编译为JavaScript代码时进行优化。</li>
+<li>类型更安全，编译过程出错就不能编译，能够及时发现错误</li>
+<li>jsx编写模板更加简单快速（不要跟vue比）</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>jsx必须要有根节点</li>
+<li>正常的普通HTML元素要小写，如果是大写，则默认为组件。</li>
+</ol>
+<p><strong>Jsx表达式</strong></p>
+<ol>
+<li>由HTML元素构成</li>
+<li>中间如果需要插入变量用{}</li>
+<li>{}中间可以使用表达式</li>
+<li>{}中间表达式中可以使用JSX对象</li>
+<li>属性和html内容一样都是用{}来插入内容</li>
+</ol>
 
       
 
@@ -223,7 +263,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">浏览器解析渲染页面原理</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
         		</li>
       		
 		</ul>
@@ -279,7 +319,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,15 +333,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/10/%E8%B7%AF%E5%BE%84%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          路径的使用
+          如何提高编写性能的JavaScript
         
       </div>
     </a>
   
+  
+    <a href="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -434,6 +479,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">路径</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
             <div class="clearfix"></div>
