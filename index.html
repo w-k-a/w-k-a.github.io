@@ -1,84 +1,508 @@
-{% extends './includes/base.swig' %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>
+        
+        Keep
+    </title>
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/style.css">
 
-{% block content %}
-    <div class="al_index_background dis_flex_center al_full_cover">
-        <div class="al_pos_ab al_letter al_index_background_letter">
-            {{ config.bio|default('A Simple Theme')|first|upper }}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":true,"expand_all":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.png","favicon":"/images/logo.svg","img_position":"left","left_side_width":"260px","content_max_width":"900px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."}},"local_search":{"enable":false,"trigger":"auto","unescape":false,"preload":false},"version":"3.0.4"};
+    KEEP.language = {"search":"搜索...","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","tagcloud":"标签云","comment":"评论","home":"首页","archive":"归档","archives":"归档","about":"关于","site_uv":"访问人数","site_pv":"总访问量","links":"友链","link":"友链","top":"顶置","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","copyright":{"title":"本文标题","author":"本文作者","link":"本文链接","create_time":"创建时间","license_title":"版权声明","license_content":"本博客所有文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"}};
+  </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+<div class="page-container">
+
+    
+        <div class="first-screen-container flex-center">
+    <div class="content flex-center">
+        <div class="description">
+            Keep writing and Keep loving.
         </div>
-        <h2 class="al_index_background_bio">
-            {{ config.bio|default('A Simple Theme') }}
-        </h2>
+        
+    </div>
+</div>
+
+    
+
+    <header class="page-header">
+        <div class="header-progress"></div>
+    </header>
+
+    <main class="page-main">
+
+        <div class="page-main-content">
+
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
+
+    <div class="header-content">
+        <a class="logo-title" href="/">
+            Keep
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class="active"
+                       href="/"
+                    >
+                        首页
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/archives"
+                    >
+                        归档
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
     </div>
 
-    <div class="al_index_container">
-        <div class="al_pos_ab al_fake_background"></div>
-        <div class="al_main_container al_shadow">
-            <div class="al_section_container dis_flex_jcenter">
-                <div class="section_header">
-                    LATEST PAGES
-                </div>
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
             </div>
 
-            <ul class="al_post_list">
-                {% for item in page.posts %}
-                    <li class="al_index_pageList_item al_index_page_seperator">
-                        <div class="al_index_post_title_cnt dis_flex">
-                            <div class="al_pos_ab al_letter al_index_post_title_letter">
-                                {{ item.title|default('No Title')|first|upper }}
-                            </div>
-                            <h2 class="al_index_post_title">
-                                <a href="{{ url_for(item.link || item.path) }}">
-                                    {{ item.title|default('No Title') }}
-                                </a>
-                            </h2>
-                            <div class="al_index_post_extra dis_flex">
-                                <div class="al_index_post_date al_index_post_extra_item">
-                                    {{ item.date.format(config.date_format + ' ' + config.time_format || "MMMM Do YYYY") }}
-                                </div>
+            <div class="page-main-content-middle">
 
-                                {% if min2read %}
-                                    <div class="al_index_post_read_time">
-                                        {{ min2read(item.content) }} Min Read
-                                    </div>
-                                {% endif %}
+                <main class="main-content normal-code-theme">
 
-                            </div>
-                        </div>
-                        <div class="al_index_post_excerpt_cnt">
-                            <p class="al_index_post_excerpt">
-                                {{ item.excerpt|striptags }}
-                            </p>
-                        </div>
-                        <div class="al_index_post_button_cnt dis_flex">
-                            <a class="al_button al_button_theme al_index_post_button" href="{{ item.link || item.path }}">
-                                READ ON
-                            </a>
-                            <a class="al_button al_button_transparent al_index_post_button" target="_blank" rel="noopener" href="//getpocket.com/edit?url={{ config.url + '/' + postURL }}">
-                                READ LATER
-                            </a>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
+                    
+                        <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
 
-            <nav class="dis_flex al_post_nav">
-                <a class="al_post_nav_item dis_flex_acenter" href="{{ page.next_link || '/' }}">
-                    {% if page.prev !== 0 %}
-                        <svg class="al_arrow">
-                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
-                        </svg>
-                        <span>Newer Posts</span>
-                    {% endif %}
-                </a>
-                <a class="al_post_nav_item dis_flex_acenter" href="{{ page.next_link || '/' }}">
-                    {% if page.next !== 0 %}
-                        <span>Older Posts</span>
-                        <svg class="al_arrow">
-                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
-                        </svg>
-                    {% endif %}
-                </a>
-            </nav>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/12/09/%E9%9D%A2%E8%AF%95%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE/">
+                        面试前端相关题目
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        ajax是什么？如何创建一个ajax?Aiax并不是一种新的技术，全称是asyncronous javascript and xml,可以说是已有技术的组合，主要用来实现客服端与服务器端的异步通信效果，实现页面的局部刷新，早期的浏览器并不能原生支持a...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Wed Dec 09 2020 17:27:08 GMT+0800">2020-12-09</span></span>
+        
+        
+    </div>
+
+    <a href="/2020/12/09/%E9%9D%A2%E8%AF%95%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/24/vue%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        vue常见面试题
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        v-if和v-show是做什么的，两者的区别？v-if是“真正的”条件渲染，因为他会确保在切换过程中条件块内的事件监听器和子组件适当的销毁和重建。
+v-if有惰性，如果初始条件为假，则什么都不会坐一直到条件为真，才会开始渲染条件块
+相比之下，v-sh...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Tue Nov 24 2020 17:20:30 GMT+0800">2020-11-24</span></span>
+        
+        
+    </div>
+
+    <a href="/2020/11/24/vue%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/">
+                        如何提高编写性能的JavaScript
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        如何编写高性能的JavaScript
+遵循严格模式：“use strict”；
+将js脚本放在页面底部，加快渲染页面；
+将Js脚本成组打包，减少请求；
+尽量使用局部变量来保存全局变量；
+尽量减少使用闭包；
+使用window对象属性方法时，省略wind...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Thu Nov 19 2020 16:51:42 GMT+0800">2020-11-19</span></span>
+        
+        
+    </div>
+
+    <a href="/2020/11/19/%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E7%BC%96%E5%86%99%E6%80%A7%E8%83%BD%E7%9A%84JavaScript/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        react学习笔记
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        React构建用户界面的JavaScript库,主要用于构建UI界面。Instagram，2013年开源。
+特点：
+
+声明式的设计
+高校，采用虚拟DOM来实现dom的渲染，最大限度的减少dom的操作
+灵活，跟其他库灵活搭配使用
+jsx,俗称js里面写...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Fri Nov 13 2020 10:52:30 GMT+0800">2020-11-13</span></span>
+        
+        
+    </div>
+
+    <a href="/2020/11/13/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/">
+                        
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        git如何拉取最新项目和推送
+
+在你需要加入一个项目开发时，需要在仓库把项目下载下来，进入gitlab， 在项目中找到你需要下载的项目地址，复制地址。这个地址分为http和ssh。
+在本地创建了一个文件夹，进入文件里面，使用cmd（黑窗口）或者git...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Thu Nov 12 2020 13:50:03 GMT+0800">2020-11-12</span></span>
+        
+        
+    </div>
+
+    <a href="/2020/11/12/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BD%BF%E7%94%A8git/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/11/10/%E8%B7%AF%E5%BE%84%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                        路径的使用
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        在前端或者其他代码的使用，路径是一个不可缺少的部分。例如实际工作中，通常新建一个文件夹专门用于存放图像文件，这时再插入图像，就需要采用“路径”的方式来指定图像文件的位置。根目录 、当前目录。 
+
+路径可以分为：相对路径和绝对路径
+1、相对路径
+以引用...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Tue Nov 10 2020 14:40:49 GMT+0800">2020-11-10</span></span>
+        
+        
+    </div>
+
+    <a href="/2020/11/10/%E8%B7%AF%E5%BE%84%E7%9A%84%E4%BD%BF%E7%94%A8/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/01/26/jQuery%E7%AC%94%E8%AE%B0/">
+                        jQuery笔记
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        jQuery是一个快速、简洁的JavaScript框架，是继承Prototype之后的又一个优秀的JavaScript代码库，jQuery的设计宗旨是“write less，do more”,提倡写更少的代码，做更多的事情，它封装JavaScript...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Sun Jan 26 2020 09:24:25 GMT+0800">2020-01-26</span></span>
+        
+        
+    </div>
+
+    <a href="/2020/01/26/jQuery%E7%AC%94%E8%AE%B0/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2019/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/">
+                        浏览器引擎
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        浏览器解析渲染页面原理
+浏览器 最重要 最核心的部分是“解释引擎”，也就是“浏览器内核”： 负责对网页语法的解释（如HTML、JavaScript）并渲染（显示）网页。网页的工作过程需要使用到两个引擎：渲染引擎和javascript引擎什么是Java...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Sun Nov 10 2019 11:25:33 GMT+0800">2019-11-10</span></span>
+        
+        
+    </div>
+
+    <a href="/2019/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2019/07/17/%E8%A1%8C%E7%B1%BB%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">
+                        行类元素、块级元素
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        行类元素与块级元素的区别行类元素：不会独自占用一行，会和其他行类元素排在一行；不能设置宽高，默认的宽高是内容撑起来的。常见的行类元素有a、b、u、span、i、em、strong等文字标签。
+块级元素：独自占用一行，有自己的宽度和高度。常见的有div...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-edit"></i> <span class="home-article-date" data-date="Wed Jul 17 2019 16:51:16 GMT+0800">2019-07-17</span></span>
+        
+        
+    </div>
+
+    <a href="/2019/07/17/%E8%A1%8C%E7%B1%BB%E5%85%83%E7%B4%A0%E3%80%81%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">阅读全文 <i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+
+    
+</div>
+
+    </div>
+</div>
+
+
+                    
+                </main>
+
+            </div>
+
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span> -
+            
+            2020 <i class="fas fa-heart icon-animate"></i> <a href="/">Keep team</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a class="theme-version" target="_blank"></a>
         </div>
     </div>
-{% endblock %}
+</footer>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
+        
+
+        
+
+        <!-- TOC aside toggle -->
+        
+
+    </ul>
+</div>
+
+    </div>
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-top flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="tools-ul-1">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+    </ul>
+</div>
+
+    </div>
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+    </aside>
+
+    <!-- image viewer -->
+    <div class="image-viewer-container">
+    <div class="img-box">
+        <img src="">
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/dark-light-toggle.js"></script>
+
+
+
+
+
+</body>
+</html>

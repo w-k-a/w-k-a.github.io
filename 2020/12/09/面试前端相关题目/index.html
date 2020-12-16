@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>
+        面试前端相关题目 |
+        
+        Keep
+    </title>
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":true,"expand_all":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.png","favicon":"/images/logo.svg","img_position":"left","left_side_width":"260px","content_max_width":"900px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."}},"local_search":{"enable":false,"trigger":"auto","unescape":false,"preload":false},"version":"3.0.4"};
+    KEEP.language = {"search":"搜索...","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","tagcloud":"标签云","comment":"评论","home":"首页","archive":"归档","archives":"归档","about":"关于","site_uv":"访问人数","site_pv":"总访问量","links":"友链","link":"友链","top":"顶置","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","copyright":{"title":"本文标题","author":"本文作者","link":"本文链接","create_time":"创建时间","license_title":"版权声明","license_content":"本博客所有文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"}};
+  </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+<div class="page-container">
+
+    
+
+    <header class="page-header">
+        <div class="header-progress"></div>
+    </header>
+
+    <main class="page-main">
+
+        <div class="page-main-content">
+
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
+
+    <div class="header-content">
+        <a class="logo-title" href="/">
+            Keep
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/"
+                    >
+                        首页
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/archives"
+                    >
+                        归档
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+            </div>
+
+            <div class="page-main-content-middle">
+
+                <main class="main-content normal-code-theme">
+
+                    
+                        <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">面试前端相关题目</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>Keep team</span>
+                        <span class="level">Lv1</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-calendar"></i> 2020-12-09 17:27:08
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AF%95/">前端笔试</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="ajax是什么？如何创建一个ajax"><a href="#ajax是什么？如何创建一个ajax" class="headerlink" title="ajax是什么？如何创建一个ajax?"></a>ajax是什么？如何创建一个ajax?</h3><p>Aiax并不是一种新的技术，全称是asyncronous javascript and xml,可以说是已有技术的组合，主要用来实现客服端与服务器端的异步通信效果，实现页面的局部刷新，早期的浏览器并不能原生支持ajax,可以使用隐藏帧（iframe）方式变相实现异步效果，后来的浏览器提供了对ajax的原生支持使用使用ajax原生方式发送请求主要通过XMLHttprequest(标准浏览器)、ActiveXObject(IE浏览器)对象实现异步通信效果。</p>
+<p><strong>Ajax优缺点</strong>：</p>
+<p>1.优点</p>
+<ul>
+<li>页面局部刷新，用户体验好。</li>
+<li>异步通信，更加快响应能力。</li>
+<li>减少冗余请求，减轻了服务器负担；按需要获取数据，节约宽带资源。</li>
+<li>基于标准化的并被广泛支持的技术，不需要下载插件或者小程序。</li>
+</ul>
+<p>2.缺点</p>
+<ul>
+<li>ajax干掉了back按钮和加入收藏书签功能，即对浏览器后退机制的破环。</li>
+<li>存在一定的安全问题，Ajax暴露了与服务器交互的细节。</li>
+<li>对搜索引擎的支持特别弱。</li>
+<li>破环了程序的异常机制。</li>
+<li>无法用URL直接访问。</li>
+</ul>
+<p><strong>创建ajax的步骤</strong></p>
+<p>Ajax的原理简单来说通过XMLHttprequest对象来向服务器发送请求，从服务器获得数据，然后用JavaScript来操作DOM而更新页面。其中就关键的一步就是从服务器获得请求数据。</p>
+<p><strong>Ajax过程：</strong></p>
+<ol>
+<li><p><strong>创建XMLHttprequest对象，也就是创建一个异步调用对象</strong></p>
+<p>XMLHttprequest是ajax的基础。XMLHttprequest用于在后台与服务器交换数据。这就意味着可以不用重新加载整个网页的情况下，对网页的某部分进行更新。所有现代浏览器均支持xmlhttpRequest对象（ie5和ie6使用activeXObiect）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var xhr;</span><br><span class="line">if (window.XMLHttpRequest)&#123;</span><br><span class="line">  &#x2F;&#x2F; IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</span><br><span class="line">  xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  &#x2F;&#x2F; IE6, IE5 浏览器执行代码</span><br><span class="line">  xhr &#x3D; new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><p><strong>创建一个新的HTTP请求，并指定该HTTP请求的方法、url及验证信息</strong></p>
+<p>如需将请求发送到服务器，我们使用XMLhttpRequest对象的open()和send()方法。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>open（method，url,async）</td>
+<td>规定请求的类型、url以及是否异步处理请求。1、method:请求的类型；get或者post.2、url:文件在服务器上的位置。3、async:true(异步)或false(同步)</td>
+</tr>
+<tr>
+<td>send(string)</td>
+<td>将请求发送到服务器。1、string:仅用于post请求</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 一个简单的get请求</span><br><span class="line">xhr.open(&quot;GET&quot;,&quot;ajax_info.txt&quot;,true);</span><br><span class="line">xhr.send();</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 一个简单的post请求</span><br><span class="line">xhr.open(&quot;POST&quot;,&quot;&#x2F;try&#x2F;ajax&#x2F;demo_post.php&quot;,true);</span><br><span class="line">xhr.send()</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><p><strong>设置相应HTTP请求状态变化的函数</strong></p>
+<p>当请求被发送到服务器时，我们需要执行一些基于响应的任务，每当readystate改变时，就会触发onreadystatechange事件。readystate属性存有XMLHttpRequest的状态信息。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onreadystatechange</td>
+<td>存储函数（或函数名），每当readyState属性改变时，就会调用该函数</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>存有XMLHttpResquest的状态。从0到4发生变化。0代表请求未初始化，1代表服务器连接已经建立，2代表请求已经接收，3代表请求处理中。4代表请求已完成，且响应已就绪</td>
+</tr>
+<tr>
+<td>status</td>
+<td>200：”ok”,400:未找到页面</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xhr.onreadystatechange &#x3D; function()&#123;</span><br><span class="line">    if(xhr.readyState &#x3D;&#x3D; 4 &amp;&amp; xhr.status &#x3D;&#x3D; 200)&#123;</span><br><span class="line">        console.log(xhr.responseText); &#x2F;&#x2F; responseText获取字符串形式的响应数据  responseXML获取XML形式的响应数据</span><br><span class="line">    &#125; </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+<li><p><strong>发送http请求</strong></p>
+</li>
+<li><p><strong>获取异步调用的返回的数据</strong></p>
+</li>
+<li><p><strong>使用JavaScript和DOM实现局部刷新</strong></p>
+<p>​</p>
+<h4 id="原生ajax实例"><a href="#原生ajax实例" class="headerlink" title="原生ajax实例"></a><strong>原生ajax实例</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> </span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"> </span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;myDiv&quot;&gt;</span><br><span class="line">    &lt;h2&gt;使用 AJAX 修改该文本内容&lt;&#x2F;h2&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;button type&#x3D;&quot;button&quot; onclick&#x3D;&quot;loadXMLDoc()&quot;&gt;修改内容&lt;&#x2F;button&gt;</span><br><span class="line"> </span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    function loadXMLDoc() &#123;</span><br><span class="line">      var xhr;</span><br><span class="line">      if (window.XMLHttpRequest) &#123;</span><br><span class="line">        &#x2F;&#x2F;  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码</span><br><span class="line">        xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">      &#125;</span><br><span class="line">      else &#123;</span><br><span class="line">        &#x2F;&#x2F; IE6, IE5 浏览器执行代码</span><br><span class="line">        xhr &#x3D; new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">      xhr.onreadystatechange &#x3D; function () &#123;</span><br><span class="line">        if (xhr.readyState &#x3D;&#x3D; 4 &amp;&amp; xhr.status &#x3D;&#x3D; 200) &#123;</span><br><span class="line">          document.getElementById(&quot;myDiv&quot;).innerHTML &#x3D; xhr.responseText;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      xhr.open(&quot;GET&quot;, &quot;&#x2F;try&#x2F;ajax&#x2F;ajax_info.txt&quot;, true);</span><br><span class="line">      xhr.send();</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用jquery封装ajax请求方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> </span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"> </span><br><span class="line">&lt;body&gt;</span><br><span class="line"> </span><br><span class="line">  &lt;div id&#x3D;&quot;myDiv&quot;&gt;</span><br><span class="line">    &lt;h2&gt;使用 jQuery AJAX 修改文本内容&lt;&#x2F;h2&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;button&gt;修改内容&lt;&#x2F;button&gt;</span><br><span class="line"> </span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    $(document).ready(function () &#123;</span><br><span class="line">      $(&quot;button&quot;).click(function () &#123;</span><br><span class="line">        htmlobj &#x3D; $.ajax(&#123;</span><br><span class="line">          type: &quot;GET&quot;,</span><br><span class="line">          url: &quot;&#x2F;jquery&#x2F;test1.txt&quot;,</span><br><span class="line">          data: &#123;&#125;,</span><br><span class="line">          dataType: &quot;json&quot;,</span><br><span class="line">          async: false,</span><br><span class="line">          success: function (data) &#123;</span><br><span class="line">            $(&quot;#myDiv&quot;).html(data);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+</ol>
+<h3 id="什么是json-优缺点"><a href="#什么是json-优缺点" class="headerlink" title="什么是json,优缺点"></a>什么是json,优缺点</h3><h3 id="RESTful是什么"><a href="#RESTful是什么" class="headerlink" title="RESTful是什么"></a>RESTful是什么</h3><h3 id="class的使用简述"><a href="#class的使用简述" class="headerlink" title="class的使用简述"></a>class的使用简述</h3><h3 id="箭头函数需要注意什么"><a href="#箭头函数需要注意什么" class="headerlink" title="箭头函数需要注意什么"></a>箭头函数需要注意什么</h3><h3 id="JavaScript如何检测一个变量是一个string类型"><a href="#JavaScript如何检测一个变量是一个string类型" class="headerlink" title="JavaScript如何检测一个变量是一个string类型"></a>JavaScript如何检测一个变量是一个string类型</h3><h3 id="请用js去除字符串的空格"><a href="#请用js去除字符串的空格" class="headerlink" title="请用js去除字符串的空格"></a>请用js去除字符串的空格</h3><h3 id="和-的区别"><a href="#和-的区别" class="headerlink" title="==和===的区别"></a>==和===的区别</h3><h3 id="如何达到浮点数的精度"><a href="#如何达到浮点数的精度" class="headerlink" title="如何达到浮点数的精度"></a>如何达到浮点数的精度</h3><h3 id="forEach、map、filter的区别"><a href="#forEach、map、filter的区别" class="headerlink" title="forEach、map、filter的区别"></a>forEach、map、filter的区别</h3><h3 id="你如何获取浏览器中URL中查询字符串中的参数"><a href="#你如何获取浏览器中URL中查询字符串中的参数" class="headerlink" title="你如何获取浏览器中URL中查询字符串中的参数"></a>你如何获取浏览器中URL中查询字符串中的参数</h3><h3 id="正则表达式，验证手机号码，验证规则：11位数字，以1开头"><a href="#正则表达式，验证手机号码，验证规则：11位数字，以1开头" class="headerlink" title="正则表达式，验证手机号码，验证规则：11位数字，以1开头"></a>正则表达式，验证手机号码，验证规则：11位数字，以1开头</h3><h3 id="已知有字符串foo-’get-element-by-id’-写一个function将其转化为驼峰法如：getElementByid"><a href="#已知有字符串foo-’get-element-by-id’-写一个function将其转化为驼峰法如：getElementByid" class="headerlink" title="已知有字符串foo=’get-element-by-id’,写一个function将其转化为驼峰法如：getElementByid"></a>已知有字符串foo=’get-element-by-id’,写一个function将其转化为驼峰法如：getElementByid</h3><h3 id="伪类和伪元素的区别"><a href="#伪类和伪元素的区别" class="headerlink" title="伪类和伪元素的区别"></a>伪类和伪元素的区别</h3><p><strong>伪类</strong>：用于已有元素处于某种状态时为其添加的对应的样式，这个状态是根据用户行为的变化行为而改变的。如用户悬停在指定元素时，可以通过:hover来描述这个元素的状态。虽然他和一般css相似，可以为已有元素添加元素样式，但是他只有处于DOM树无法描述的状态下才能为元素添加样式，所以称为伪类。</p>
+<p><strong>伪元素</strong>：用于创建一些不在DOM元素中的元素，并为其添加样式。例如，我们可以通过:berfor</p>
+<p>来在一个元素之前添加一些文本，并为这些文本添加样式，虽然用户可以看的见这些文本，但是它实际上并不存在DOM文档中。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：面试前端相关题目</li>
+        <li>本文作者：Keep team</li>
+        <li>创建时间：2020-12-09 17:27:08</li>
+        <li>
+            本文链接：https://keep.xpoet.cn/2020/12/09/面试前端相关题目/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/11/24/vue%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">vue常见面试题</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center" >
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                    
+                </main>
+
+            </div>
+
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span> -
+            
+            2020 <i class="fas fa-heart icon-animate"></i> <a href="/">Keep team</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a class="theme-version" target="_blank"></a>
+        </div>
+    </div>
+</footer>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
+        
+
+        
+
+        <!-- TOC aside toggle -->
+        
+
+    </ul>
+</div>
+
+    </div>
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-top flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="tools-ul-1">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+    </ul>
+</div>
+
+    </div>
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAajax"><span class="nav-number">1.</span> <span class="nav-text">ajax是什么？如何创建一个ajax?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%9Fajax%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.1.</span> <span class="nav-text">原生ajax实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFjson-%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">什么是json,优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESTful%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">3.</span> <span class="nav-text">RESTful是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class%E7%9A%84%E4%BD%BF%E7%94%A8%E7%AE%80%E8%BF%B0"><span class="nav-number">4.</span> <span class="nav-text">class的使用简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E4%BB%80%E4%B9%88"><span class="nav-number">5.</span> <span class="nav-text">箭头函数需要注意什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E4%B8%80%E4%B8%AA%E5%8F%98%E9%87%8F%E6%98%AF%E4%B8%80%E4%B8%AAstring%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">JavaScript如何检测一个变量是一个string类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B7%E7%94%A8js%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E7%A9%BA%E6%A0%BC"><span class="nav-number">7.</span> <span class="nav-text">请用js去除字符串的空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%92%8C-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.</span> <span class="nav-text">&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%BE%BE%E5%88%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E7%B2%BE%E5%BA%A6"><span class="nav-number">9.</span> <span class="nav-text">如何达到浮点数的精度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach%E3%80%81map%E3%80%81filter%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">10.</span> <span class="nav-text">forEach、map、filter的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%A0%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%ADURL%E4%B8%AD%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">11.</span> <span class="nav-text">你如何获取浏览器中URL中查询字符串中的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%8C%E9%AA%8C%E8%AF%81%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%8C%E9%AA%8C%E8%AF%81%E8%A7%84%E5%88%99%EF%BC%9A11%E4%BD%8D%E6%95%B0%E5%AD%97%EF%BC%8C%E4%BB%A51%E5%BC%80%E5%A4%B4"><span class="nav-number">12.</span> <span class="nav-text">正则表达式，验证手机号码，验证规则：11位数字，以1开头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B2%E7%9F%A5%E6%9C%89%E5%AD%97%E7%AC%A6%E4%B8%B2foo-%E2%80%99get-element-by-id%E2%80%99-%E5%86%99%E4%B8%80%E4%B8%AAfunction%E5%B0%86%E5%85%B6%E8%BD%AC%E5%8C%96%E4%B8%BA%E9%A9%BC%E5%B3%B0%E6%B3%95%E5%A6%82%EF%BC%9AgetElementByid"><span class="nav-number">13.</span> <span class="nav-text">已知有字符串foo&#x3D;’get-element-by-id’,写一个function将其转化为驼峰法如：getElementByid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">14.</span> <span class="nav-text">伪类和伪元素的区别</span></a></li></ol>
+    </div>
+</div>
+        
+    </aside>
+
+    <!-- image viewer -->
+    <div class="image-viewer-container">
+    <div class="img-box">
+        <img src="">
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/left-side-toggle.js"></script>
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/code-copy.js"></script>
+    
+
+    
+
+
+</body>
+</html>
