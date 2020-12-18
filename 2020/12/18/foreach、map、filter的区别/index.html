@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: 前端笔试 | Fuqiong博客</title>
+  <title>foreach、map、filter的区别 | Fuqiong博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,69 +167,120 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/拼命姑娘.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>GETTING OUT OF BED IN WINTER IS ONE OF LIFE'S HARDEST MISSION.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>冬天，将自己从被窝里掏出来，是人生最难的任务之一了。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/04/09/面试前端相关题目/">面试前端相关题目</a></h4>
-                            
-                            <p><time datetime="2020-04-09T09:27:08.000Z"><a href="/2020/04/09/面试前端相关题目/">2020-04-09</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-12-18T08:44:24.000Z" itemprop="datePublished">
+          2020-12-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/foreach、map、filter/'>foreach、map、filter</a>
+    
+    
+</span>
+                <h1>foreach、map、filter的区别</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="forEach、map、filter的区别"><a href="#forEach、map、filter的区别" class="headerlink" title="forEach、map、filter的区别"></a>forEach、map、filter的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var array &#x3D; [[1,2,3,4],[2,4,5,6]]</span><br><span class="line"></span><br><span class="line">   array.forEach(function (item,i,arr) &#123;</span><br><span class="line"></span><br><span class="line">       console.log(&#39;item的值:&#39;+item)  &#x2F;&#x2F;第一次是[1,2,3,4] 第二次是[2,4,5,6]</span><br><span class="line"></span><br><span class="line">       console.log(&#39;i的值:&#39;+i)          &#x2F;&#x2F;第一次是0   第二次是1</span><br><span class="line"></span><br><span class="line">       console.log(arr)                 &#x2F;&#x2F;都是指向这个数组arr</span><br><span class="line"></span><br><span class="line">       console.log(item[i]);           &#x2F;&#x2F;第一次是1  第二次是4</span><br><span class="line"></span><br><span class="line">   &#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>总有在前进跟努力后，才不会让命运玩弄自己。</p>
+<p><strong>相同之处</strong>：</p>
+<p>都有三个参数，item是每次遍历的子元素，i是下标，arr是指的是数组。</p>
+<p><strong>不同之处</strong>：</p>
+<p>是否有返回值</p>
+<p>forEach:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr&#x3D;[[1,2,3,4],[2,3,4,5]]</span><br><span class="line">var arr1&#x3D;arr.forEach(function(item,i,arr)&#123;</span><br><span class="line">    return item;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(arr1) &#x2F;&#x2F; 返回值为undefined</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/12/18/foreach%E3%80%81map%E3%80%81filter%E7%9A%84%E5%8C%BA%E5%88%AB/foreach.png"></p>
+<p>map:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr&#x3D;[[1,2,3,4],[2,3,4,5]]</span><br><span class="line">var arr1&#x3D;arr.map(function(item,i,arr)&#123;</span><br><span class="line">    return item;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(arr1)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/12/18/foreach%E3%80%81map%E3%80%81filter%E7%9A%84%E5%8C%BA%E5%88%AB/map.png"></p>
+<p>filter:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr&#x3D;[[1,2,3,4],[2,3,4,5]]</span><br><span class="line">var arr1&#x3D;arr.filter(function(item,i,arr)&#123;</span><br><span class="line">    return item;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(arr1)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/12/18/foreach%E3%80%81map%E3%80%81filter%E7%9A%84%E5%8C%BA%E5%88%AB/filter.png"></p>
+<p>从上可以看出，forEach返回的是undefined,map和filter返回的参数的是一样的。但是map和filter的区别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr&#x3D;[1,2,3,4,5,6,7,8,9]</span><br><span class="line">var arr1&#x3D;arr.map(function(item,i)&#123;</span><br><span class="line">    return item&gt;5;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(arr1)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/12/18/foreach%E3%80%81map%E3%80%81filter%E7%9A%84%E5%8C%BA%E5%88%AB/map1.png"></p>
+<p>filter有过滤作用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr&#x3D;[1,2,3,4,5,6,7,8,9]</span><br><span class="line">var arr1&#x3D;arr.filter(function(item,i)&#123;</span><br><span class="line">    return item&gt;5;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(arr1)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/12/18/foreach%E3%80%81map%E3%80%81filter%E7%9A%84%E5%8C%BA%E5%88%AB/filter1.png"></p>
+<p>map返回的是原来的数组，将原来的数组对于条件返回。filter返回的是一个新的数组。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2020/12/17/%E4%BD%BF%E7%94%A8vue%E5%88%B6%E4%BD%9C%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">
+        使用vue制作历史记录 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

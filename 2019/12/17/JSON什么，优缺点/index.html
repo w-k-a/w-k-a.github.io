@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: 前端笔试 | Fuqiong博客</title>
+  <title>JSON什么，优缺点 | Fuqiong博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,69 +167,119 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/拼命姑娘.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>GETTING OUT OF BED IN WINTER IS ONE OF LIFE'S HARDEST MISSION.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>冬天，将自己从被窝里掏出来，是人生最难的任务之一了。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/04/09/面试前端相关题目/">面试前端相关题目</a></h4>
-                            
-                            <p><time datetime="2020-04-09T09:27:08.000Z"><a href="/2020/04/09/面试前端相关题目/">2020-04-09</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-12-17T09:01:39.000Z" itemprop="datePublished">
+          2019-12-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/JSON/'>JSON</a>
+    
+    
+</span>
+                <h1>JSON什么，优缺点</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="什么是json-优缺点"><a href="#什么是json-优缺点" class="headerlink" title="什么是json,优缺点"></a>什么是json,优缺点</h3><p>有一种叫做JSON(javascript object nonation)的轻量级数据交换格式能够代替xml的工作，就是json。</p>
+<p>数据格式比较简单，易于读写，格式都是压缩的，占用宽带小。</p>
+<p>易于解析这种语言，客服端可以通过Javascript可以简单的通过eval()进行json数据的读取。包括ActionScript,C,C#,ColdFusion,Java,JavaScrpt,perl,PHP,Python,ruby等语言服务器端语言，便于服务器端的解析。各语言对JSON支持特别好，自从Ajax的流行，json格式的传输就更流行了。</p>
+<p>面试时：可以这样说：json是一个字符串，有规则的字符串，然后表达形式是以键值对的形式存在的，可以用来前后端的交互，接口口，配置文件，文件存储，目前移动端比较火，一般的项目也会用到json来传输。</p>
+<p><strong>优点</strong>：</p>
+<p>数据格式比较简单，易于读写，格式都是压缩的，占用宽带小；</p>
+<p>易于解析，客服端JavaScript可以通过简单的eval()进行json数据的读取；</p>
+<p>支持多种语言，包括ActionScript, C, C#, ColdFusion, Java, JavaScript, Perl, PHP, Python, Ruby等服务器端语言，便于服务器端的解析；</p>
+<p>在PHP世界，已经有PHP-JSON和JSON-PHP出现了，偏于PHP序列化后的程序直接调用，PHP服务器的对象、数组等能直接生成JSON格式，便于客服端的访问提取；</p>
+<p>因为JSON格式能直接为服务器代码使用，大大简化了服务器端和客服端的代码开发量，且完成任务不变，并且易于维护。</p>
+<p><strong>缺点</strong></p>
+<ol>
+<li>没有xml格式这么推广的深入人心和喜用广泛，没有xml那么通用性；</li>
+<li>json格式目前在web Service中的推广还属于初级阶段。</li>
+</ol>
+<p><strong>json和xml的对比</strong></p>
+<p><strong>xml demo</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt; </span><br><span class="line">&lt;country&gt; </span><br><span class="line"> &lt;name&gt;中国&lt;&#x2F;name&gt; </span><br><span class="line"> &lt;province&gt; </span><br><span class="line"> &lt;name&gt;黑龙江&lt;&#x2F;name&gt; </span><br><span class="line"> &lt;citys&gt; </span><br><span class="line"> &lt;city&gt;哈尔滨&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;city&gt;大庆&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;&#x2F;citys&gt; </span><br><span class="line"> &lt;&#x2F;province&gt; </span><br><span class="line"> &lt;province&gt; </span><br><span class="line"> &lt;name&gt;广东&lt;&#x2F;name&gt; </span><br><span class="line"> &lt;citys&gt; </span><br><span class="line"> &lt;city&gt;广州&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;city&gt;深圳&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;city&gt;珠海&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;&#x2F;citys&gt; </span><br><span class="line"> &lt;&#x2F;province&gt; </span><br><span class="line"> &lt;province&gt; </span><br><span class="line"> &lt;name&gt;台湾&lt;&#x2F;name&gt; </span><br><span class="line"> &lt;citys&gt; </span><br><span class="line"> &lt;city&gt;台北&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;city&gt;高雄&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;&#x2F;citys&gt; </span><br><span class="line"> &lt;&#x2F;province&gt; </span><br><span class="line"> &lt;province&gt; </span><br><span class="line"> &lt;name&gt;新疆&lt;&#x2F;name&gt; </span><br><span class="line"> &lt;citys&gt; </span><br><span class="line"> &lt;city&gt;乌鲁木齐&lt;&#x2F;city&gt; </span><br><span class="line"> &lt;&#x2F;citys&gt; </span><br><span class="line"> &lt;&#x2F;province&gt; </span><br><span class="line">&lt;&#x2F;country&gt;</span><br></pre></td></tr></table></figure>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>总有在前进跟努力后，才不会让命运玩弄自己。</p>
+<p><strong>json demo</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123; </span><br><span class="line"> &quot;name&quot;: &quot;中国&quot;， </span><br><span class="line"> &quot;province&quot;: [ &#123; &quot;name&quot;: &quot;黑龙江&quot;， &quot;citys&quot;: &#123; &quot;city&quot;: [ &quot;哈尔滨&quot;， &quot;大庆&quot; ] &#125; &#125;， &#123; &quot;name&quot;: &quot;广东&quot;， &quot;citys&quot;: &#123; &quot;city&quot;: [ &quot;广州&quot;， &quot;深圳&quot;， &quot;珠海&quot; ] &#125; &#125;， &#123; &quot;name&quot;: &quot;台湾&quot;，</span><br><span class="line"> &quot;citys&quot;: &#123; &quot;city&quot;: [ &quot;台北&quot;， &quot;高雄&quot; ] &#125; &#125;， &#123; &quot;name&quot;: &quot;新疆&quot;， &quot;citys&quot;: &#123; &quot;city&quot;: [ &quot;乌鲁木齐&quot; ] &#125; &#125; ] </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/01/26/jQuery%E7%AC%94%E8%AE%B0/" style="float: left;">
+        ← jQuery笔记
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/11/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E/">
+        浏览器引擎 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
